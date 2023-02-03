@@ -51,9 +51,8 @@ void loop() {
   duration2 = pulseIn(PIN_ECHO2, HIGH);
 
   
-
-  s2 = (duration / 2) / 29.1;
   s1 = (duration1 / 2) / 29.1;
+  s2 = (duration / 2) / 29.1; //пока не используется для упрощения расчётов
   s3 = (duration2 / 2) / 29.1;
 
   //зоны 1, 2, 3, 4
@@ -111,7 +110,7 @@ void loop() {
     }
   }
   else {
-    Serial.print ("ERROR!")
+    Serial.print ("ERROR!") //скорее всего везде, где будет ERROR - там либо аут, либо другой робот подпер, как определять, что именно пока не знаю
   }
 
   delay(2000);
