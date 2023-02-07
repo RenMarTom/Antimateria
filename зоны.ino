@@ -76,16 +76,16 @@ void loop() {
   //зоны 5, 6, 7, 8
   else if ((s3 >= 90)&&(s3 <= 148)) {
     if ((s1 >= 30)&&(s1 <= 60)) {
-      Serial.print ("1");
+      Serial.print ("5");
    }
     else if ((s1 >= 62)&&(s1 <= 90)) {
-      Serial.print ("2");
+      Serial.print ("6");
    }
     else if ((s1 >= 92)&&(s1 <= 120)) {
-      Serial.print ("3");
+      Serial.print ("7");
    }
     else if ((s1 >= 122)&&(s1 <= 150)) {
-      Serial.print ("4");
+      Serial.print ("8");
    }
     else {
       Serial.print ("ERROR!!!")
@@ -94,16 +94,16 @@ void loop() {
   //зоны 9, 10, 11, 12
   else if ((s3 >= 30)&&(s3 <= 88)) {
     if ((s1 >= 30)&&(s1 <= 60)) {
-      Serial.print ("1");
+      Serial.print ("9");
    }
     else if ((s1 >= 62)&&(s1 <= 90)) {
-      Serial.print ("2");
+      Serial.print ("10");
    }
     else if ((s1 >= 92)&&(s1 <= 120)) {
-      Serial.print ("3");
+      Serial.print ("11");
    }
     else if ((s1 >= 122)&&(s1 <= 150)) {
-      Serial.print ("4");
+      Serial.print ("12");
    }
     else {
       Serial.print ("ERROR!!!")
