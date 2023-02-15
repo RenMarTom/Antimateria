@@ -1,0 +1,56 @@
+#include <SoftwareSerial.h>
+#define PIN_ECHO 9
+#define PIN_TRIG 10
+#define PIN_ECHO1 11
+#define PIN_TRIG1 12
+SoftwareSerial mySerial(2, 3);
+
+long duration, cm;
+long duration1, cm1;
+
+void setup() {
+
+  pinMode(2,INPUT);
+  pinMode(3,OUTPUT);
+  Serial.begin(38400);
+  mySerial.begin(9600);
+  
+  pinMode(PIN_TRIG, OUTPUT);
+  pinMode(PIN_ECHO, INPUT);
+  pinMode(PIN_TRIG1, OUTPUT);
+  pinMode(PIN_ECHO1, INPUT);
+}
+
+void loop() {
+
+  digitalWrite(PIN_TRIG, LOW);
+  delayMicroseconds(5);
+  digitalWrite(PIN_TRIG, HIGH);
+
+  delayMicroseconds(10);
+  digitalWrite(PIN_TRIG, LOW);
+
+  duration = pulseIn(PIN_ECHO, HIGH);
+
+  digitalWrite(PIN_TRIG1, LOW);
+  delayMicroseconds(5);
+  digitalWrite(PIN_TRIG1, HIGH);
+
+  delayMicroseconds(10);
+  digitalWrite(PIN_TRIG1, LOW);
+
+  duration1 = pulseIn(PIN_ECHO1, HIGH);
+
+  
+
+  cm = (duration / 2) / 29.1;
+  cm1 = (duration1 / 2) / 29.1;
+
+  mySerial.print("Sensor - 1: ");
+  mySerial.println(cm);
+  mySerial.print("Sensor - 2: ");
+  mySerial.println(cm1);
+  
+
+  delay(250);
+}
