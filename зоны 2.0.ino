@@ -35,21 +35,21 @@ void loop() {
 
   duration = pulseIn(PIN_ECHO, HIGH);
   delay(50);
+  digitalWrite(PIN_TRIG, LOW);
+  delayMicroseconds(5);
+  digitalWrite(PIN_TRIG, HIGH);
+
+  delayMicroseconds(10);
+  digitalWrite(PIN_TRIG, LOW);
+
+  duration1 = pulseIn(PIN_ECHO1, HIGH);
+  delay(50);
   digitalWrite(PIN_TRIG1, LOW);
   delayMicroseconds(5);
   digitalWrite(PIN_TRIG1, HIGH);
 
   delayMicroseconds(10);
   digitalWrite(PIN_TRIG1, LOW);
-
-  duration1 = pulseIn(PIN_ECHO1, HIGH);
-  delay(50);
-  digitalWrite(PIN_TRIG2, LOW);
-  delayMicroseconds(5);
-  digitalWrite(PIN_TRIG2, HIGH);
-
-  delayMicroseconds(10);
-  digitalWrite(PIN_TRIG2, LOW);
 
   duration2 = pulseIn(PIN_ECHO2, HIGH);
   delay(50);
