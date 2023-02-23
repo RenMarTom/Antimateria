@@ -1,15 +1,24 @@
-int light = 0
+int light = 0;
+int pinPhoto = A0;
+int Led = 13;
 
 void setup() {
-  pinMode( A0, INPUT );
-  pinMode( 13, OUTPUT );
+  pinMode(pinPhoto, INPUT );
+  pinMode(Led, OUTPUT );
+  Serial.begin(9600);
 }
 
 void loop() {
+  digitalWrite(Led, OUTPUT);
   light = analogRead( pinPhoto );
-  if( light < 600)
-    digitalWrite( led, HIGH );
+  if (light < 300)
+  {
+     Serial.println("WHITE");
+  }
   else
-    digitalWrite( led, LOW );
-  delay(200);
+  {
+     Serial.println("NOT WHITE");
+  }
+   delay(200);
 }
+   
