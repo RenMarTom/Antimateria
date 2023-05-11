@@ -31,7 +31,7 @@ if(UP > 1)
 
       }
 
-   if(UP < -1)
+   if(UP< -1)
    {
      OnFwd(OUT_B, -50);
      OnFwd(OUT_C, 50);
