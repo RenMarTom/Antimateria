@@ -160,12 +160,12 @@ if(UP > -2)
    {
    if(S3 > 20) {
     OnFwd(OUT_C, 50);
-    OnFwd(OUT_B, -50);
+    Off(OUT_B);
    }
 
-   if(S3 > 20) {
+   if(S3 < 8) {
     OnFwd(OUT_B, 50);
-    OnFwd(OUT_C, -50);
+    Off(OUT_C);
    }
 
       }
