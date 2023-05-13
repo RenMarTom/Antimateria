@@ -158,10 +158,15 @@ if(UP > -2)
 
    if(dir < 6)
    {
-   OnFwd(OUT_BC, 90);
+   if(S3 > 20) {
+    OnFwd(OUT_C, 50);
+    OnFwd(OUT_B, -50);
+   }
 
-
-
+   if(S3 > 20) {
+    OnFwd(OUT_B, 50);
+    OnFwd(OUT_C, -50);
+   }
 
       }
     if(dir == 6)
