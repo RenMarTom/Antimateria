@@ -23,21 +23,24 @@ SetSensorLowspeed(IN_1);
     //int zeZ;
     //zeZ = SENSOR_2;
     //zeP = SENSOR_3;
-     OnFwd(OUT_BC, 90);
+     /* OnFwd(OUT_BC, 90);
      if(SENSOR_3>10)
      Off(OUT_BC);
       OnFwd(OUT_BC, -90);
       Wait(700);
       OnFwd(OUT_B, 30);
      OnFwd(OUT_C, -30);
-     Wait(600);
+     Wait(600); */
 
-  while(UP < (-5) || UP > 5)  {
+  while(UP < (-85) && Up > (-95) || UP > 85 && UP < 95)  {
    OnFwd(OUT_B, -50);
    OnFwd(OUT_C, 50);
   }    
  while(S3 < 5) {
-  OnFwd(OUT_BC, -100);
+  OnFwd(OUT_BC, -100); }
+ while(UP < 5 || UP < (-6)) {
+  OnFwd(OUT_B, -50);
+  OnFwd(OUT_C, 50);
  }
   while(1)
 {
