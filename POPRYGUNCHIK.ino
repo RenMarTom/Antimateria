@@ -32,7 +32,13 @@ SetSensorLowspeed(IN_1);
      OnFwd(OUT_C, -30);
      Wait(600);
 
-
+  while(UP < (-5) || UP > 5)  {
+   OnFwd(OUT_B, -50);
+   OnFwd(OUT_C, 50);
+  }    
+ while(S3 < 5) {
+  OnFwd(OUT_BC, -100);
+ }
   while(1)
 {
   Us=SENSOR_2;
